@@ -2,9 +2,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: true, unique: true,foreign_key: false|
-|e-mail|string|index: false, null: true, unique: true,foreign_key: false|
-|password|string|index: false, null: true, unique: true,foreign_key: false|
+|name|string|index , null: false, unique: true|
+|e-mail|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
 - has_many :groups,through::menbers
@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: false, null: true, unique: false,foreign_key: false|
+|name|string|index, null: false|
 
 
 ### Association
@@ -27,8 +27,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index: true, null: false, unique: false, foreign_key: true|
-|group_id|integer|index: false, null: false, unique: false, foreign_key: true|
+|user_id|integer|index, null: false, foreign_key: true|
+|group_id|integer| null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -38,10 +38,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index: true, null: false, unique: false, foreign_key: true|
-|group_id|integer|index: true, null: false, unique: false, foreign_key: true|
-|body|text|index: false, null: true, unique: false, foreign_key: false|
-|image|text|index: false, null: true, unique: false, foreign_key: false|
+|user_id|integer|index: true, null: false, foreign_key: true|
+|group_id|integer|index: true, null: false, foreign_key: true|
+|body|text|null: false|
+|image|text|null: false|
 
 ### Association
 - belongs_to :group
