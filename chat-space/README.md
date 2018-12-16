@@ -2,7 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index , null: false, unique: true|
+|name|string|index: true, null: false, unique: true|
 |e-mail|string|null: false, unique: true|
 |password|string|null: false|
 
@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index, null: false|
+|name|string|index :true, null: false|
 
 
 ### Association
@@ -27,8 +27,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index, null: false, foreign_key: true|
-|group_id|integer| null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference| null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index: true, null: false, foreign_key: true|
-|group_id|integer|index: true, null: false, foreign_key: true|
+|user_id|reference| null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 |body|text|null: false|
 |image|text|null: false|
 
