@@ -10,13 +10,14 @@
   line-height: 100px;
   padding: 0 20px;
 
-   &__name h3{
+   &__name {
      font-size: 16px;
      font-weight: bold;
      float: left;
    }
 
-   &__icon i{
+   &__icon {
+  display: flex;
   float: right;
   letter-spacing: 6px;
   line-height: 100px;
